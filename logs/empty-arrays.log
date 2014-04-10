@@ -1,0 +1,72 @@
+>> a=[]
+a =
+     []
+>> c = (a==[])
+c =
+     []
+>> class(a==[])
+ans =
+logical
+>> class(1==[])
+ans =
+logical
+>> (1==[])
+ans =
+     []
+>> (ones(10)==[])
+Error using  == 
+Matrix dimensions must agree. 
+>> size(1)
+ans =
+     1     1
+>> (ones(1,1)==[])
+ans =
+     []
+>> (ones(1,0)==[])
+Error using  == 
+Matrix dimensions must agree. 
+>> (ones(0,1)==[])
+Error using  == 
+Matrix dimensions must agree. 
+>> (ones(0,0)==[])
+ans =
+     []
+>> (ones(0,1)==[])
+Error using  == 
+Matrix dimensions must agree. 
+>> (ones(1,0)==[])
+Error using  == 
+Matrix dimensions must agree. 
+>> (ones(1,1)==[])
+ans =
+     []
+>> (ones(1,1,1)==[])
+ans =
+     []
+>> (ones(1,1,0)==[])
+Error using  == 
+Number of array dimensions must match for binary array op. 
+>> (ones(1,1,1)==[])
+ans =
+     []
+>> size(ones(1,1,1))
+ans =
+     1     1
+>> size(ones(1,1,1,1))
+ans =
+     1     1
+>> if (a==[]), disp(1); else disp(0); end
+     0
+>> isequal([], [])
+ans =
+     1
+>> isequal(1, [])
+ans =
+     0
+>> isequal(ones(0,0), [])
+ans =
+     1
+>> isequal(ones(0,0,0), [])
+ans =
+     0
+>> 
