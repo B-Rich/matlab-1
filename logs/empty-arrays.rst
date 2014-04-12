@@ -265,3 +265,169 @@
      a =
         Empty matrix: 0-by-10
      >> 
+     >> 1+[]
+     
+Operators::
+
+     ans =
+          []
+     >> 1*[]
+     ans =
+          []
+     >> 1-[]
+     ans =
+          []
+     >> []-1
+     ans =
+          []
+     >> []/2
+     ans =
+          []
+     >> 2/[]
+     Error using  / 
+     Matrix dimensions must agree.
+      
+     >> 1.*[]
+     ans =
+          []
+     >> 1./[]
+     ans =
+          []
+     >> [].ones(2)
+      [].ones(2)
+       |
+     Error: Unexpected MATLAB operator.
+      
+     >> []./ones(2)
+     Error using  ./ 
+     Matrix dimensions must agree.
+      
+     >> ones(2)./1
+     ans =
+          1     1
+          1     1
+     >> ones(2)./[]
+     Error using  ./ 
+     Matrix dimensions must agree.
+      
+     >> 1^[]
+     ans =
+          []
+     >> 1.^[]
+     ans =
+          []
+     >> ones(2).^[]
+     Error using  .^ 
+     Matrix dimensions must agree.
+      
+     >> ones(2)^[]
+     Error using  ^ 
+     Inputs must be a scalar and a square matrix.
+     To compute elementwise POWER, use POWER (.^) instead.
+      
+     >> []^2
+     ans =
+          []
+     >> [].^2
+     ans =
+          []
+     >> [].^ones(2)
+     Error using  .^ 
+     Matrix dimensions must agree.
+      
+     >> []^ones(2)
+     Error using  ^ 
+     Inputs must be a scalar and a square matrix.
+     To compute elementwise POWER, use POWER (.^) instead.
+      
+     >> sin([])
+     ans =
+          []
+     >> log([])
+     ans =
+          []
+     >> isequal(log([]), [])
+     ans =
+          1
+     >> sin(ones(0,0))
+     ans =
+          []
+     >> size(sin(ones(0,0)))
+     ans =
+          0     0
+     >> size(sin(ones(0,1)))
+     ans =
+          0     1
+     >> size(sin(ones(1,0)))
+     ans =
+          1     0
+     >> size(sin(ones(1,0,2,3,4)))
+     ans =
+          1     0     2     3     4
+     >> size(ones(0))
+     ans =
+          0     0
+     >> size(ones(-1))
+     ans =
+          0     0
+     >> size(ones(-100))
+     ans =
+          0     0
+     >> size(ones(-100,0))
+     ans =
+          0     0
+     >> size(ones(-100,-10))
+     ans =
+          0     0
+     >> rand(0)
+     ans =
+          []
+     >> []+[]
+     ans =
+          []
+     >> []*[]
+     ans =
+          []
+     >> []/[]
+     ans =
+          []
+     >> []\[]
+     ans =
+          []
+     >> \
+      \
+     |
+     Error: Unexpected MATLAB operator.
+      
+     >> []^[]
+     Error using  ^ 
+     Inputs must be a scalar and a square matrix.
+     To compute elementwise POWER, use POWER (.^) instead.
+      
+     >> [].^[]
+     ans =
+          []
+     >> ones(0,10)+ ones(0,20)
+     Error using  + 
+     Matrix dimensions must agree.
+      
+     >> ones(0,10)* ones(0,20)
+     Error using  * 
+     Inner matrix dimensions must agree.
+      
+     >> ones(0,10)* ones(10,0)
+     ans =
+          []
+     >> ones(10,0)* ones(0,10)
+     ans =
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+          0     0     0     0     0     0     0     0     0     0
+     >> 
