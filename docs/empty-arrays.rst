@@ -38,7 +38,29 @@ Empty arrays can come in as many number of dimensions or dimensions as long as a
     ans = 
        1x2x0 struct array with no fields.
 
+.. warning::
+
+    These functions silently ignore negative arguments and replace them with zero. That means ``ones(-10,2)`` is exactly the same as ``ones(0,2)``. This can be an issue if the arguments are calculated using other variables, e.g., before using  ``ones(m, n-m)`` one needs to explicitly check if ``n>=m``.
+
+A common way of encountering empty arrays is by all-false logical indexing in a non-empty array. However note that using a full-size logical matrix for indexing always leads to a 0-by-1 empty array.
+
+
+.. code:: matlab
+
+    >> A=rand(2,4)
+    A =
+        0.0759    0.5308    0.9340    0.5688
+        0.0540    0.7792    0.1299    0.4694
+    >> A(A(:,1)>1, :)
+    ans =
+       Empty matrix: 0-by-4
+    >> A(A>1)
+    ans =
+       Empty matrix: 0-by-1
+
 Comparision
 -----------
 
-`being edited here <http://rst.ninjs.org/?n=965979ed973e11139752e05048605007&theme=nature>`_
+
+
+`being edited here <http://rst.ninjs.org/?n=805e588098773e041e94e8d0f9c769db&theme=nature>`_
