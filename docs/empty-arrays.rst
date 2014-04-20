@@ -61,6 +61,19 @@ A common way of encountering empty arrays is by all-false logical indexing in a 
 Comparision
 -----------
 
+For statement
+---------------
+MATLAB for statement for I=M iterates over columns of M however it doesn't check if M is an empty array or not, therefor, following code
+
+.. code:: matlab
+
+    F = rand(4);
+    M = F(F(:,1)>1,:);
+    for I=M,
+        disp('no way!')
+    end
+
+will execute the inner loop 4 times, which in most cases is not a desirable outcome.
 
 
 `being edited here <http://rst.ninjs.org/?n=805e588098773e041e94e8d0f9c769db&theme=nature>`_
