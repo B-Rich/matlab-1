@@ -63,7 +63,7 @@ Comparision
 
 For statement
 ---------------
-MATLAB for statement for I=M iterates over columns of M however it doesn't check if M is an empty array or not, therefor, following code
+MATLAB for statement ``for I=M``  iterates over columns of ``M`` however it doesn't check if ``M`` is an empty array or not, therefore, following code
 
 .. code:: matlab
 
