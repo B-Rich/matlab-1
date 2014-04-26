@@ -60,6 +60,25 @@ A common way of encountering empty arrays is by all-false logical indexing in a 
 
 Comparision
 -----------
+Empty arrays follow the same rules when it comes to comparison operator ``==``. They can either be compared with an array of the same size or a scalar. That the result is always an empty logical array of the same size.
+
+.. code:: matlab
+
+    >> a=[]
+    a =
+      []
+    >> a==[]
+    ans =
+      []
+    >> class(a==[])
+    ans =
+    logical
+    >> (1==[])
+    ans =
+      []
+    >> class(1==[])
+    ans =
+    logical
 
 For statement
 ---------------
